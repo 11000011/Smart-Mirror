@@ -25,5 +25,10 @@ function updateclock() {
 $(document).ready(function() {
   $("#intro").fadeOut(3000, function() {
     requestAnimationFrame(updateclock);
+    icons.add("weather", Skycons.RAIN);
+    $("#temp").html("??.??°" );
+    getweather();
+    setInterval(getweather, 600000);
+    icons.play();
   });
 });

@@ -24,3 +24,27 @@ div.time {
   font-size: 10em;
   font-weight: 900;
 }
+
+.weather {
+  position: fixed;
+  top: 10%;
+  left:85%;
+}
+
+#temp {
+  color: #EEEEEE;
+  font-family: "Righteous", cursive;
+  font-weight: 700;
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+}
+
+#parent {
+  position: relative;
+}
+
+#weather {
+  position: absolute;
+  left: 0;
+}
