@@ -8,9 +8,19 @@ div.time {
   color: #EEEEEE;
   position: fixed;
   top: 10%;
-  left: 20%;
+  left: 10%;
+  font-family: "Righteous", cursive;
+  font-size: 4em;
+  font-weight: 900;
+}
+
+#intro {
+  color: #EEEEEE;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Righteous", cursive;
-  font-size: 5em;
+  font-size: 10em;
   font-weight: 900;
 }
