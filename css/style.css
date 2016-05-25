@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+body {
+  background-color: #111111
+}
+
+div.time {
+  color: #EEEEEE;
+  position: fixed;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-family: "Righteous", cursive;
+  font-size: 5em;
+  font-weight: 900;
+}
