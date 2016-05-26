@@ -19,6 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" media="screen,projection" />
+    <script src="js/calendar_script.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
   </head>
 
   <body>
@@ -30,6 +32,10 @@
         <canvas id="weather" width="128" height="128" ></canvas>
         <div id="temp"></div>
       </div>
+    </div>
+    <div id="calendar">
+      <ul>
+      </ul>
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/skycons.js"></script>

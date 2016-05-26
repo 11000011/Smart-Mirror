@@ -12,7 +12,7 @@ div.time {
   font-size: 4em;
   font-weight: 900;
   top: 10%;
-  left:5%;
+  left: 5%;
 }
 
 div.date {
@@ -23,7 +23,7 @@ div.date {
   left:5.3%;
   font-size: 2em;
   font-weight: 500;
-  text-align:justify;
+  text-align: justify;
   margin: auto;
 }
 
@@ -60,4 +60,15 @@ div.date {
 #weather {
   position: absolute;
   left: 0;
+}
+
+#calendar {
+  color: #EEEEEE;
+  font-family: "Righteous", cursive;
+  font-size: 1.2em;
+  position: fixed;
+  top: 80%;
+  left: 5%;
+  border-color: #EEEEEE;
+  border: medium;
 }
