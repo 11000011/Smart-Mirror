@@ -18,8 +18,17 @@ function updateclock() {
   if (second < 10) {
     second = '0' + second;
   }
-  $(".time").html(hour + " : " + minute + " : " + second)
-  requestAnimationFrame(updateclock)
+  var dat = curdate.getDate();
+  var mont = curdate.getMonth()+1
+var year =  curdate.getFullYear();
+  if(dat<10)
+      dat='0' + dat;
+  if(mont<10)
+      mont='0'+ mont;
+  
+  $(".time").html(hour + " : " + minute);
+  $(".date").html(dat + "/" + mont + "/" + year);
+  requestAnimationFrame(updateclock);
 }
 
 $(document).ready(function() {
