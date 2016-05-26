@@ -19,12 +19,12 @@ function updateclock() {
     second = '0' + second;
   }
   var dat = curdate.getDate();
-  var mont = curdate.getMonth()+1
-    var year =  curdate.getFullYear();
-  if(dat<10)
-    dat='0' + dat;
-  if(mont<10)
-    mont='0'+ mont;
+  var mont = curdate.getMonth()+1;
+  var year =  curdate.getFullYear();
+  if(dat < 10)
+    dat = '0' + dat;
+  if(mont < 10)
+    mont = '0'+ mont;
 
   $(".time").html(hour + " : " + minute);
   $(".date").html(dat + "/" + mont + "/" + year);
@@ -37,7 +37,9 @@ $(document).ready(function() {
     icons.add("weather", Skycons.RAIN);
     $("#temp").html("??.??°" );
     getweather();
+    //checkAuth();
     setInterval(getweather, 600000);
+    //setInterval(checkAuth, 1800000);
     icons.play();
   });
 });
