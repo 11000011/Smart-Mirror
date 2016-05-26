@@ -4,14 +4,27 @@ body {
   background-color: #111111
 }
 
+
 div.time {
   color: #EEEEEE;
   position: fixed;
-  top: 10%;
-  left: 5%;
   font-family: "Righteous", cursive;
   font-size: 4em;
   font-weight: 900;
+  top: 10%;
+  left:5%;
+}
+
+div.date {
+  color: #eeeeee;
+  position: fixed;
+  font-family: "Righteous", cursive;
+  top: 20%;
+  left:5.3%;
+  font-size: 2em;
+  font-weight: 500;
+  text-align:justify;
+  margin: auto;
 }
 
 #intro {
