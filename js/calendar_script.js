@@ -73,7 +73,7 @@ function listUpcomingEvents() {
           minute = "0" + minute;
         }
         when = when.getDate() + '/' + when.getMonth() + " " + when.getHours() + ":" + minute;
-        $("ul").append('<li>'+ event.summary + ' (' + when + ')' + '</li>');
+        $("#calender ul").append('<li>'+ event.summary + ' (' + when + ')' + '</li>');
         console.log(event);
       }
     } else {

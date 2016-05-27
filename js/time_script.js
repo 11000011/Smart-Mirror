@@ -37,9 +37,10 @@ $(document).ready(function() {
     icons.add("weather", Skycons.RAIN);
     $("#temp").html("??.??°" );
     getweather();
-    //checkAuth();
+    get_noti();
+    checkAuth();
     setInterval(getweather, 600000);
-    //setInterval(checkAuth, 1800000);
+    setInterval(checkAuth, 1800000);
     icons.play();
   });
 });
