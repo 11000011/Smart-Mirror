@@ -21,9 +21,14 @@ function contactApi(lat, lon) {
 }
 
 function getweather() {
+  console.log("Get Weather Called")
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(pos) {
-      contactApi(pos.coords.latitude, pos.coords.longitude)
+      if (pos == null) {
+        contactApi(26.5130072, 80.2337094)
+      } else {
+        contactApi(pos.coords.latitude, pos.coords.longitude)
+      }
     })
   } else {
     contactApi(26.5130072, 80.2337094)
