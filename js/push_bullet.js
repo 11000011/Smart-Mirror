@@ -31,6 +31,7 @@ function get_noti() {
 
         var temp = "#" + data.push.notification_id;
         $(temp).remove();
+        count = count - 1;
       }
     }
   }
