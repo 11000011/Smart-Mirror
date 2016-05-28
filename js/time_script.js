@@ -26,8 +26,7 @@ function updateclock() {
   if(mont < 10)
     mont = '0'+ mont;
 
-  $(".time").html(hour + " : " + minute);
-  $(".date").html(dat + "/" + mont + "/" + year);
+  $("#parent_time").html('<span id ="time">' + hour + " : " + minute + '</span><br><span id = "date">' + dat + "/" + mont + "/" + year + '</span>');
   requestAnimationFrame(updateclock);
 }
 

@@ -3,28 +3,24 @@
 body {
   background-color: #111111
 }
-
-
-div.time {
-  color: #EEEEEE;
-  position: fixed;
-  font-family: "Righteous", cursive;
-  font-size: 4em;
-  font-weight: 900;
-  top: 10%;
-  left: 5%;
+#parent_time {
+ position: fixed;
+ top: 10%;
+ left:5%;
+ text-align: center;
+ color: #EEEEEE;
+ position: fixed;
+ font-family: "Righteous", cursive;
 }
 
-div.date {
-  color: #eeeeee;
-  position: fixed;
-  font-family: "Righteous", cursive;
-  top: 20%;
-  left:5.3%;
+#time{
+  font-size: 4em;
+  font-weight: 900;
+}
+
+#date {
   font-size: 2em;
   font-weight: 500;
-  text-align: justify;
-  margin: auto;
 }
 
 #intro {
