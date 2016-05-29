@@ -60,7 +60,7 @@ function listUpcomingEvents() {
   request.execute(function(resp) {
     var events = resp.items;
     if (events.length > 0) {
-      $("ul").html("");
+      $("#calendar ul").html("");
       for (i = 0; i < events.length; i++) {
         var event = events[i];
         var when = event.start.dateTime;
@@ -73,7 +73,7 @@ function listUpcomingEvents() {
           minute = "0" + minute;
         }
         when = when.getDate() + '/' + when.getMonth() + " " + when.getHours() + ":" + minute;
-        $("#calender ul").append('<li>'+ event.summary + ' (' + when + ')' + '</li>');
+        $("#calendar ul").append('<li>'+ event.summary + ' (' + when + ')' + '</li>');
         console.log(event);
       }
     } else {
