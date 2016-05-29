@@ -1,6 +1,6 @@
 var websocket;
 var count = 0;
-var apiKey = 'o.nHrBQdtDKru7izb33HbejfZzAcGGVLiH';
+var apiKey = 'o.6yALotLlRTzRJ04jDXgZnAEc2EyeosHk';
 function get_noti() {
   if (websocket != null) {
     websocket.close();
@@ -12,6 +12,7 @@ function get_noti() {
   }
   websocket.onmessage = function(e) {
     var data = JSON.parse(e.data);
+    console.log(data);
     var check = new Array(5);
     if(data.type == "push") {
       if(data.push.type == "mirror")
@@ -19,7 +20,7 @@ function get_noti() {
         if(count > 2)
         {
           $("#push li")[0].remove();
-          count -= 1;
+          count = count - 1;
         }
         var temp = "#" + data.push.notification_id;
         $(temp).remove();
@@ -28,9 +29,9 @@ function get_noti() {
       }
       else if (data.push.type == "dismissal")
       {
-
         var temp = "#" + data.push.notification_id;
         $(temp).remove();
+        count = count - 1
       }
     }
   }
