@@ -1,5 +1,5 @@
 var icons = new Skycons({
-  "color": "white"
+  "color": "#EEEEEE"
 });
 
 function contactApi(lat, lon) {
@@ -15,8 +15,11 @@ function contactApi(lat, lon) {
       icons.set("weather", weather.currently.icon);
       var t = weather.currently.temperature;
       t = (t - 32) * 5 / 9.0;
-      t = Math.round(t * 100) / 100;
-      $("#temp").html(t + "°");
+      t = Math.round(t);
+      $("#temp").addClass("four");
+      $("#temp").html(t + "°" + "C" + "<p></p>");
+      $("#temp").addClass("two");
+      $("#temp").append(weather.currently.summary);
     })
 }
 

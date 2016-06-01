@@ -4,16 +4,16 @@ body {
   background-color: #111111
 }
 #parent_time {
- position: fixed;
- top: 10%;
- left:5%;
- text-align: center;
- color: #EEEEEE;
- position: fixed;
- font-family: "Righteous", cursive;
+  position: fixed;
+  top: 10%;
+  left:5%;
+  text-align: center;
+  color: #EEEEEE;
+  position: fixed;
+  font-family: "Righteous", cursive;
 }
 
-#time{
+#time {
   font-size: 4em;
   font-weight: 900;
 }
@@ -35,27 +35,32 @@ body {
 }
 
 .weather {
-  position: fixed;
+  position: relative;
   top: 10%;
+  margin-top: 4.0%;
   left:85%;
-}
+  color: #EEEEEE
 
+}
 #temp {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 700;
-  font-size: 2em;
   position: absolute;
-  right: 0;
+  left:-5%;
+  float:left;
 }
-
-#parent {
-  position: relative;
+.four {
+  font-size:4em;
 }
-
+.two {
+  font-size:2em;
+}
 #weather {
   position: absolute;
-  left: 0;
+  color: #EEEEEE;
+  left :1%;
+
 }
 
 #calendar {
@@ -69,13 +74,13 @@ body {
   border: medium;
 }
 #push_bullet {
- color: #EEEEEE;
- font-family: "Righteous", cursive;
- font-size: 1.2em;
- position: fixed;
- top: 80%;
- right: 5%;
- border-color: #EEEEEE;
- border: medium;
+  color: #EEEEEE;
+  font-family: "Righteous", cursive;
+  font-size: 1.2em;
+  position: fixed;
+  top: 80%;
+  right: 5%;
+  border-color: #EEEEEE;
+  border: medium;
 }
 
