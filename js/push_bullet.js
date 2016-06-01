@@ -1,5 +1,4 @@
 var websocket;
-var count = 0;
 var apiKey = 'o.nHrBQdtDKru7izb33HbejfZzAcGGVLiH';
 function get_noti() {
   if (websocket != null) {
@@ -15,12 +14,12 @@ function get_noti() {
     if(data.type == "push") {
       if(data.push.type == "mirror")
       {
-     	 if ( $('#push li').length > 2 ) {
-          $("#push li")[0].remove();
-        }
         var temp = "#" + data.push.notification_id;
         $(temp).remove();
         $("#push_bullet ul").append('<li id ="' + data.push.notification_id + '">' + data.push.title + " : " + data.push.body.substr(0 , 25) + '.....</li>');
+     	if ( $('#push li').length > 2 ) {
+          $("#push li")[0].remove();
+        }
       }
       else if (data.push.type == "dismissal")
       {
