@@ -38,6 +38,7 @@ body {
   position: fixed;
   top: 10%;
   left:85%;
+  color: #EEEEEE
 }
 
 #temp {
@@ -46,7 +47,7 @@ body {
   font-weight: 700;
   font-size: 2em;
   position: absolute;
-  right: 0;
+  right:0;
 }
 
 #parent {
@@ -55,7 +56,8 @@ body {
 
 #weather {
   position: absolute;
-  left: 0;
+ /* left: 0;*/
+  color: #EEEEEE
 }
 
 #calendar {
@@ -78,4 +80,13 @@ body {
  border-color: #EEEEEE;
  border: medium;
 }
+.icondes {
+  position:fixed;
+  top:10%;
+  left:91.6%;
+  color: #EEEEEE;
+  font-size: 1.7em;
+  font-weight:700;
+  font-family :"Righteous" , cursive;
+  }
 

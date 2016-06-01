@@ -1,4 +1,4 @@
-var icons = new Skycons({"color": "white"});
+var icons = new Skycons({"color": "#EEEEEE"});
 function getweather() {
     $.ajax({
       url: "http://ip-api.com/json/?callback=?",
@@ -18,8 +18,9 @@ function getweather() {
         icons.set("weather", weather.currently.icon);
         var t = weather.currently.temperature;
         t = (t - 32) * 5 / 9.0;
-        t = Math.round( t * 100 ) / 100;
+        t = Math.round( t * 1 ) / 1;
         $("#temp").html(t + "°" );
+        $(".icondes").html(weather.currently.icon);
       })
     })
 }
