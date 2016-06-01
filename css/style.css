@@ -4,13 +4,13 @@ body {
   background-color: #111111
 }
 #parent_time {
- position: fixed;
- top: 10%;
- left:5%;
- text-align: center;
- color: #EEEEEE;
- position: fixed;
- font-family: "Righteous", cursive;
+  position: fixed;
+  top: 10%;
+  left:5%;
+  text-align: center;
+  color: #EEEEEE;
+  position: fixed;
+  font-family: "Righteous", cursive;
 }
 
 #time{
@@ -56,7 +56,6 @@ body {
 
 #weather {
   position: absolute;
- /* left: 0;*/
   color: #EEEEEE
 }
 
@@ -71,14 +70,14 @@ body {
   border: medium;
 }
 #push_bullet {
- color: #EEEEEE;
- font-family: "Righteous", cursive;
- font-size: 1.2em;
- position: fixed;
- top: 80%;
- right: 5%;
- border-color: #EEEEEE;
- border: medium;
+  color: #EEEEEE;
+  font-family: "Righteous", cursive;
+  font-size: 1.2em;
+  position: fixed;
+  top: 80%;
+  right: 5%;
+  border-color: #EEEEEE;
+  border: medium;
 }
 .icondes {
   position:fixed;
@@ -88,5 +87,5 @@ body {
   font-size: 1.7em;
   font-weight:700;
   font-family :"Righteous" , cursive;
-  }
+}
 
