@@ -1,6 +1,6 @@
 var websocket;
-var count = 0;
-var apiKey = 'o.KIx0dIC4mg80DiYKQofaWQAYF0QLgbM7';
+var apiKey = 'o.nHrBQdtDKru7izb33HbejfZzAcGGVLiH';
+
 function get_noti() {
   if (websocket != null) {
     websocket.close();
@@ -12,26 +12,17 @@ function get_noti() {
   }
   websocket.onmessage = function(e) {
     var data = JSON.parse(e.data);
-    var check = new Array(5);
-    if(data.type == "push") {
-      if(data.push.type == "mirror")
-      {
-        if(count > 2)
-        {
+    if (data.type == "push") {
+      if (data.push.type == "mirror") {
+        var temp = "#" + data.push.notification_id;
+        $(temp).remove();
+        $("#push_bullet ul").append('<li id ="' + data.push.notification_id + '">' + data.push.title + " : " + data.push.body.substr(0, 25) + '.....</li>');
+        if ($('#push li').length > 2) {
           $("#push li")[0].remove();
-          count -= 1;
         }
+      } else if (data.push.type == "dismissal") {
         var temp = "#" + data.push.notification_id;
         $(temp).remove();
-        $("#push_bullet ul").append('<li id ="' + data.push.notification_id + '">' + data.push.title + " : " + data.push.body.substr(0 , 25) + '.....</li>');
-        count = count + 1;
-      }
-      else if (data.push.type == "dismissal")
-      {
-
-        var temp = "#" + data.push.notification_id;
-        $(temp).remove();
-        count = count - 1;
       }
     }
   }
@@ -42,4 +33,3 @@ function get_noti() {
     console.log("closed");
   }
 }
-
