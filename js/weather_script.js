@@ -18,9 +18,11 @@ function getweather() {
         icons.set("weather", weather.currently.icon);
       var t = weather.currently.temperature;
       t = (t - 32) * 5 / 9.0;
-      t = Math.round( t * 1 ) / 1;
-      $("#temp").html(t + "°" );
-      $(".icondes").html(weather.currently.icon);
+      t = Math.round( t * 1 );
+      $("#temp").addClass("four");
+      $("#temp").html(t + "°" + "C" + "<p></p>"  );
+      $("#temp").addClass("two");
+      $("#temp").append( weather.currently.summary);
     })
   })
 }

@@ -13,7 +13,7 @@ body {
   font-family: "Righteous", cursive;
 }
 
-#time{
+#time {
   font-size: 4em;
   font-weight: 900;
 }
@@ -35,28 +35,32 @@ body {
 }
 
 .weather {
-  position: fixed;
+  position: relative;
   top: 10%;
+  margin-top: 4.0%;
   left:85%;
   color: #EEEEEE
-}
 
+}
 #temp {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 700;
-  font-size: 2em;
   position: absolute;
-  right:0;
+  left:-5%;
+  float:left;
 }
-
-#parent {
-  position: relative;
+.four {
+  font-size:4em;
 }
-
+.two {
+  font-size:2em;
+}
 #weather {
   position: absolute;
-  color: #EEEEEE
+  color: #EEEEEE;
+  left :1%;
+
 }
 
 #calendar {
@@ -78,14 +82,5 @@ body {
   right: 5%;
   border-color: #EEEEEE;
   border: medium;
-}
-.icondes {
-  position:fixed;
-  top:10%;
-  left:91.6%;
-  color: #EEEEEE;
-  font-size: 1.7em;
-  font-weight:700;
-  font-family :"Righteous" , cursive;
 }
 
