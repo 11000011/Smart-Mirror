@@ -1,5 +1,9 @@
 var websocket;
-var apiKey = 'o.nHrBQdtDKru7izb33HbejfZzAcGGVLiH';
+var apiKey;
+$.get("push_bullet_api.txt",function(data){
+	apiKey = data;
+	console.log(data);
+	});
 function get_noti() {
   if (websocket != null) {
     websocket.close();
