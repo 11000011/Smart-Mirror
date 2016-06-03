@@ -12,6 +12,9 @@ body {
  position: fixed;
  font-family: "Righteous", cursive;
 }
+#video {
+  visibility:hidden;
+}
 
 #time{
   font-size: 4em;
