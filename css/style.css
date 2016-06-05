@@ -26,6 +26,8 @@ body {
   font-weight: 500;
 }
 
+
+
 #intro {
   color: #EEEEEE;
   position: fixed;
@@ -38,9 +40,8 @@ body {
 }
 
 .weather {
-  position: relative;
+  position: fixed;
   top: 10%;
-  margin-top: 4.0%;
   left:85%;
   color: #EEEEEE
 
@@ -49,21 +50,27 @@ body {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 700;
-  position: absolute;
-  left:-5%;
+  position: relative;
   float:left;
+  font-size: 4em;
 }
-.four {
-  font-size:4em;
+#summary {
+  color: #EEEEEE;
+  font-family: "Righteous", cursive;
+  font-weight: 500;
+  position: absolute;
+  font-size: 2em;
+  top:94%;
 }
-.two {
-  font-size:2em;
+#temp_sum {
+ margin-top:-75%;
+ margin-left: -109%;
+  text-align: center;
 }
 #weather {
-  position: absolute;
+  position: relative;
   color: #EEEEEE;
-  left :1%;
-
+  left :8%;
 }
 
 #calendar {

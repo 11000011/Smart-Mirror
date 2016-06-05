@@ -16,10 +16,8 @@ function contactApi(lat, lon) {
       var t = weather.currently.temperature;
       t = (t - 32) * 5 / 9.0;
       t = Math.round(t);
-      $("#temp").addClass("four");
-      $("#temp").html(t + "°" + "C" + "<p></p>");
-      $("#temp").addClass("two");
-      $("#temp").append(weather.currently.summary);
+      $("#temp").html(t + "°" + " " + "C");
+      $("#summary").html(weather.currently.summary);
     })
 }
 
