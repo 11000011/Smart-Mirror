@@ -26,6 +26,8 @@ body {
   font-weight: 500;
 }
 
+
+
 #intro {
   color: #EEEEEE;
   position: fixed;
@@ -38,10 +40,9 @@ body {
 }
 
 .weather {
-  position: relative;
+  position: fixed;
   top: 10%;
-  margin-top: 4.0%;
-  left:85%;
+  left:80%;
   color: #EEEEEE
 
 }
@@ -49,21 +50,24 @@ body {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 700;
-  position: absolute;
-  left:-5%;
+  position: relative;
+  left:-10%;
   float:left;
+  font-size: 4em;
 }
-.four {
-  font-size:4em;
-}
-.two {
-  font-size:2em;
+#summary {
+  color: #EEEEEE;
+  font-family: "Righteous", cursive;
+  font-weight: 500;
+  position: absolute;
+  top: 55%;
+  left:3%;
+  font-size: 2em;
 }
 #weather {
-  position: absolute;
+  position: relative;
   color: #EEEEEE;
-  left :1%;
-
+  left :8%;
 }
 
 #calendar {
