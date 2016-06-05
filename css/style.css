@@ -42,7 +42,7 @@ body {
 .weather {
   position: fixed;
   top: 10%;
-  left:80%;
+  left:85%;
   color: #EEEEEE
 
 }
@@ -51,7 +51,6 @@ body {
   font-family: "Righteous", cursive;
   font-weight: 700;
   position: relative;
-  left:-10%;
   float:left;
   font-size: 4em;
 }
@@ -60,9 +59,13 @@ body {
   font-family: "Righteous", cursive;
   font-weight: 500;
   position: absolute;
-  top: 55%;
-  left:3%;
   font-size: 2em;
+  top:94%;
+}
+#temp_sum {
+ margin-top:-75%;
+ margin-left: -109%;
+  text-align: center;
 }
 #weather {
   position: relative;
