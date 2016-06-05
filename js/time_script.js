@@ -42,5 +42,6 @@ $(document).ready(function() {
     setInterval(getweather, 600000);
     setInterval(checkAuth, 1800000);
     icons.play();
+    main();
   });
 });
