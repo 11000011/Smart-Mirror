@@ -26,8 +26,6 @@ body {
   font-weight: 500;
 }
 
-
-
 #intro {
   color: #EEEEEE;
   position: fixed;
@@ -50,7 +48,6 @@ body {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 700;
-  position: relative;
   float:left;
   font-size: 4em;
 }
@@ -58,14 +55,13 @@ body {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 500;
-  position: absolute;
   font-size: 2em;
-  top:94%;
 }
 #temp_sum {
- margin-top:-75%;
- margin-left: -109%;
-  text-align: center;
+ display:inline-block;
+ left:75%;
+ text-align: center;
+ position:fixed;
 }
 #weather {
   position: relative;
