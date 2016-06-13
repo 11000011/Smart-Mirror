@@ -6,7 +6,7 @@ function contactApi(lat, lon) {
   console.log(lat)
   console.log(lon)
   $.ajax({
-      url: "https://api.forecast.io/forecast/70a79cc9ef81d5d038f26f0163b83d22/" + lat + "," + lon + "?callback=?",
+      url: "https://api.forecast.io/forecast/" + keys.weatherKey + "/" + lat + "," + lon + "?callback=?",
       type: "GET",
       dataType: "json",
     })

@@ -1,37 +1,23 @@
-// Your Client ID can be retrieved from your project in the Google
-// Developer Console, https://console.developers.google.com
-var CLIENT_ID = '304309191848-nuae7uddkjbt3jamnaos1h6bkuu5p8in.apps.googleusercontent.com';
+var users;
+var keys;
+var current_user;
 
-var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
-
-/**
- * Check if current user has authorized this application.
- */
-console.log("Check Auth Loaded");
-function checkAuth() {
-  gapi.auth.authorize({
-    'client_id': CLIENT_ID,
-    'scope': SCOPES.join(' '),
-    'immediate': true
-  }, handleAuthResult);
-}
-
-/**
- * Handle response from authorization server.
- *
- * @param {Object} authResult Authorization result.
- */
-function handleAuthResult(authResult) {
-  if (authResult && !authResult.error) {
+function getAuth() {
+  $.ajax({
+  url: "https://www.googleapis.com/oauth2/v4/token",
+  data: {
+    client_id: keys.clientId,
+    client_secret: keys.clientSecret,
+    refresh_token: current_user.refreshKey,
+    grant_type: "refresh_token"
+  },
+  type: "POST",
+  dataType: "json"
+  })
+  .done(function(token) {
+    gapi.auth.setToken(token);
     loadCalendarApi();
-  } else {
-    gapi.auth.authorize({
-        client_id: CLIENT_ID,
-        scope: SCOPES,
-        immediate: false
-      },
-      handleAuthResult);
-  }
+  });
 }
 
 /**
@@ -59,8 +45,8 @@ function listUpcomingEvents() {
 
   request.execute(function(resp) {
     var events = resp.items;
+    $("#calendar ul").html("");
     if (events.length > 0) {
-      $("#calendar ul").html("");
       for (i = 0; i < events.length; i++) {
         var event = events[i];
         var when = event.start.dateTime;

@@ -79,6 +79,7 @@ body {
   border-color: #EEEEEE;
   border: medium;
 }
+
 #push_bullet {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
@@ -90,3 +91,6 @@ body {
   border: medium;
 }
 
+#image {
+  display: none;
+}
