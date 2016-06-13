@@ -36,6 +36,9 @@ function readSettings() {
     current_user = users[0];
     console.log(json);
   });
+  $.get("keys.json", function(json) {
+    keys = json;
+  });
 }
 $(document).ready(function() {
   readSettings();

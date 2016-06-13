@@ -1,12 +1,13 @@
 var users;
+var keys;
 var current_user;
 
 function getAuth() {
   $.ajax({
   url: "https://www.googleapis.com/oauth2/v4/token",
   data: {
-    client_id: '304309191848-fj262rfiuq75jp6mdnmio6bf8ekqbs75.apps.googleusercontent.com',
-    client_secret: "OUQ2Jy3augIf2xkYOcTDn9ee",
+    client_id: keys.clientId,
+    client_secret: keys.clientSecret,
     refresh_token: current_user.refreshKey,
     grant_type: "refresh_token"
   },

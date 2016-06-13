@@ -34,7 +34,7 @@ function getData(c) {
     beforeSend: function(xhrObj) {
       // Request headers
       xhrObj.setRequestHeader("Content-Type", "application/octet-stream");
-      xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "f6e2bf72a27f447f9d6bb5eb8a33c53b");
+      xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", keys.microsoftKey);
     },
     type: "POST",
       // The DataURL will be something like "data:image/png;base64,{image-data-in-base64}"
@@ -48,7 +48,7 @@ function getData(c) {
         url: "https://api.projectoxford.ai/face/v1.0/identify",
         beforeSend: function(xhrObj) {
           xhrObj.setRequestHeader("Content-Type", "application/json");
-          xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "f6e2bf72a27f447f9d6bb5eb8a33c53b");
+          xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", keys.microsoftKey);
         },
         type: "POST",
         data: "{\"personGroupId\": \"smartmirror\",\n\"faceIds\": [\"" + faceId + "\"],\n\"maxNumOfCandidatesReturned\": 1\n}"
