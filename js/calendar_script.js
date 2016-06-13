@@ -44,8 +44,8 @@ function listUpcomingEvents() {
 
   request.execute(function(resp) {
     var events = resp.items;
+    $("#calendar ul").html("");
     if (events.length > 0) {
-      $("#calendar ul").html("");
       for (i = 0; i < events.length; i++) {
         var event = events[i];
         var when = event.start.dateTime;
