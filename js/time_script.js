@@ -30,16 +30,24 @@ function updateclock() {
   requestAnimationFrame(updateclock);
 }
 
+function readSettings() {
+  $.get("users.json", function(json) {
+    users = (json);
+    current_user = users[0];
+    console.log(json);
+  });
+}
 $(document).ready(function() {
+  readSettings();
   $("#intro").fadeOut(3000, function() {
     requestAnimationFrame(updateclock);
     icons.add("weather", Skycons.RAIN);
     $("#temp").html("??° " + "C" );
     getweather();
     get_noti();
-    checkAuth();
+    getAuth();
     setInterval(getweather, 600000);
-    setInterval(checkAuth, 1800000);
+    setInterval(getAuth, 1800000);
     icons.play();
     main();
   });

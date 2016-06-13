@@ -1,16 +1,12 @@
 var websocket;
-var apiKey;
-$.get("push_bullet_api.txt", function(data) {
-  apiKey = data;
-  console.log(data);
-});
 
 function get_noti() {
   if (websocket != null) {
     websocket.close();
   }
 
-  websocket = new WebSocket('wss://stream.pushbullet.com/websocket/' + apiKey);
+  $("#push li").remove();
+  websocket = new WebSocket('wss://stream.pushbullet.com/websocket/' + current_user.pushKey);
   websocket.onopen = function(e) {
     console.log("websocket.opened");
   }
