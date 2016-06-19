@@ -45,6 +45,7 @@ $(document).ready(function() {
   $("#intro").fadeOut(3000, function() {
     requestAnimationFrame(updateclock);
     icons.add("weather", Skycons.RAIN);
+    $("#temp_sum").height($("#temp_sum").width());
     $("#temp").html("??° " + "C" );
     getweather();
     get_noti();

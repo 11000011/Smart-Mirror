@@ -13,7 +13,11 @@ body {
   font-family: "Righteous", cursive;
 }
 #video {
-  visibility:hidden;
+  position:absolute;
+  height:5%;
+  width:5%;
+  left:5%;
+  bottom:2%;
 }
 
 #time {
@@ -48,7 +52,6 @@ body {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 700;
-  float:left;
   font-size: 4em;
 }
 #summary {
@@ -58,10 +61,10 @@ body {
   font-size: 2em;
 }
 #temp_sum {
- display:inline-block;
- left:75%;
- text-align: center;
- position:fixed;
+  display:inline-block;
+  left:73%;
+  text-align: center;
+  position:fixed;
 }
 #weather {
   position: relative;
@@ -94,3 +97,12 @@ body {
 #image {
   display: none;
 }
+footer {
+  color: #EEEEEE;
+  font-family: "Righteous", cursive;
+  font-size: 1em;
+  bottom: 2%;
+  position:fixed;
+  left:85%;
+}
+
