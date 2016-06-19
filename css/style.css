@@ -16,7 +16,7 @@ body {
   position:absolute;
   height:5%;
   width:5%;
-  left:5%;
+  left:8%;
   bottom:2%;
 }
 
@@ -44,7 +44,7 @@ body {
 .weather {
   position: fixed;
   top: 10%;
-  left:85%;
+  left:88%;
   color: #EEEEEE
 
 }
@@ -62,7 +62,7 @@ body {
 }
 #temp_sum {
   display:inline-block;
-  left:73%;
+  left:75%;
   text-align: center;
   position:fixed;
 }
@@ -103,6 +103,6 @@ footer {
   font-size: 1em;
   bottom: 2%;
   position:fixed;
-  left:85%;
+  left:79%;
 }
 
