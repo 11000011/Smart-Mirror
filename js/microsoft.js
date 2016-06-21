@@ -62,6 +62,7 @@ function getData(c) {
                 found = true;
                 current_user = users[i];
                 console.log(current_user.name + " identified.");
+                $("footer").html(current_user.name + " identified.");
                 get_noti();
                 getAuth();
                 break;
@@ -70,34 +71,43 @@ function getData(c) {
           }
         } else {
           console.log("No compatible match found");
+          $("footer").html("No compatible match found");
         }
         identifying = false;
         console.log("Identifying Finished - Normal finish");
+        $("footer").html("Identifying Finished - Normal finish");
       }).fail(function(xhr, status, err) {
         console.log( "Error: " + err );
         console.log( "Status: " + status );
         console.dir( xhr );
         identifying = false;
         console.log("Identifying Finished - Failed contact");
+        $("footer").html("Identifying Finished - Failed contact");
       });
     } else {
       identifying = false;
       console.log("Identifying Finished - No faces in the image");
+      $("footer").html("Identifying Finished - No faces in the image");
     }
   })
   .fail(function(xhr, status, err) {
     console.log( "Error: " + err );
     console.log( "Status: " + status );
+    $("footer").html( "Error: " + err);
+    $("footer").html( "Status: " + status);
     console.dir( xhr );
     identifying = false;
     console.log("Identifying Finished - Failed contact");
+    $("footer").html("Identfying Finished - Failed Contact");
   });
 }
 function main() {
   if (!identifying) {
     console.log("Face found & Person not identified");
+    $("footer").html("Face found & Person not identified");
     if(check() && !found) {
       console.log("Face found & Person not identified");
+      $("footer").html("Face found & Person not identified");
       var video  = document.getElementById('video');
       var canvas = document.getElementById('image');
       canvas.width  = video.videoWidth;
@@ -109,6 +119,7 @@ function main() {
       found = false;
     } else {
       console.log("Same person as before");
+      $("footer").html("Same person as before");
     }
   }
   setTimeout(main, 2000);
