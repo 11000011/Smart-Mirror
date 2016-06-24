@@ -54,5 +54,6 @@ $(document).ready(function() {
     setInterval(getAuth, 1800000);
     icons.play();
     main();
+    live();
   });
 });

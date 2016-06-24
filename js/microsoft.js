@@ -127,3 +127,13 @@ function main() {
   }
   setTimeout(main, 2000);
 }
+
+function live() {
+  var video = document.getElementById('video');
+  var canvas = document.getElementById('image2');
+  canvas.width  = video.videoWidth;
+  canvas.height = video.videoHeight;
+  var ctx = canvas.getContext('2d');
+  ctx.drawImage(video, 0, 0);
+  setTimeout(live, 16);
+}
