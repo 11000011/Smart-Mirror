@@ -93,8 +93,6 @@ function getData(c) {
   .fail(function(xhr, status, err) {
     console.log( "Error: " + err );
     console.log( "Status: " + status );
-    $("footer").html( "Error: " + err);
-    $("footer").html( "Status: " + status);
     console.dir( xhr );
     identifying = false;
     console.log("Identifying Finished - Failed contact");
@@ -103,8 +101,6 @@ function getData(c) {
 }
 function main() {
   if (!identifying) {
-    console.log("Face found & Person not identified");
-    $("footer").html("Face found & Person not identified");
     if(check() && !found) {
       console.log("Face found & Person not identified");
       $("footer").html("Face found & Person not identified");
@@ -117,9 +113,16 @@ function main() {
       getData(canvas);
     } else if(!check() && found) {
       found = false;
+      console.log("Reset");
+      $("footer").html("Reset");
     } else {
-      console.log("Same person as before");
-      $("footer").html("Same person as before");
+      if (found) {
+        console.log(current_user.name);
+        $("footer").html(current_user.name);
+      } else {
+        console.log("Waiting for someone to appear");
+        $("footer").html("Waiting for someone to appear");
+      }
     }
   }
   setTimeout(main, 2000);

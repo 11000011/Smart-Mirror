@@ -63,6 +63,7 @@ body {
 #temp_sum {
   display:inline-block;
   left:75%;
+  top : 10%;
   text-align: center;
   position:fixed;
 }
