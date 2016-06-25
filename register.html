@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Basic Page Needs
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta charset="utf-8">
+      <title>Smart Mirror Registration</title>
+      <meta name="description" content="Registration of a user for the smart mirror">
+      <meta name="author" content="">
+
+      <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONT
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+          <!-- CSS
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/skeleton.css">
+
+            <!-- Favicon
+              –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+              <link rel="icon" type="image/png" href="images/favicon.png">
+
+  </head>
+  <body>
+
+    <!-- Primary Page Layout
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="container">
+        <div class="row">
+          <div class="six columns">
+            <form>
+              <div class="row">
+                <div class="ten columns" style="margin-top: 25%">
+                  <h4 class="u-full-width">Smart Mirror</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="ten columns">
+                  <label for="exampleName">Your name</label>
+                  <input class="u-full-width" type="text" placeholder="Foo Bar" id="exampleName">
+                </div>
+              </div>
+              <div class="row" style="margin-top: 5%">
+                <div class="ten columns">
+                  <ul>
+                    <li>Go to <a href="https://www.pushbullet.com/#settings" target="_blank">www.pushbullet.com/#settings</a> </li>
+                    <li>Login and click on create access token </li>
+                    <li>Copy the token and paste it here </li>
+                  </ul>
+                  <label for="pushKey">Pushbullet API Key</label>
+                  <input class="u-full-width" type="text" placeholder="Pushbullet Key" id="pushKey">
+                </div>
+              </div>
+              <div class="row" style="margin-top: 5%">
+                <ul>
+                  <li>Goto <a href="http://www.google.com/device" target="_blank">www.google.com/device</a></li>
+                  <li>Paste this code there: <code id="google">FOOO-BAAR</code></li>
+                  <li>Authenticate the device to acces your calendar</li>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <div class="six columns" style="margin-top: 20%">
+            <div class="row">
+              <video id="video" class="u-full-width"></video>
+            </div>
+            <div class="row">
+              <button id="b1">Image 1</button>
+              <button id="b2">Image 2</button>
+              <button id="b3">Image 3</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <center>
+            <button class="button-primary" id="submit">Submit</button>
+          </center>
+        </div>
+      </div>
+      <canvas id="canvas" style="display: none;"></canvas>
+
+      <!-- End Document
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/compatibility.js"></script>
+        <script src="js/smoother.js"></script>
+        <script src="js/register.js"></script>
+  </body>
+</html>

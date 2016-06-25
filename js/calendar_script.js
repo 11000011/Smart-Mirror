@@ -43,9 +43,9 @@ function listUpcomingEvents() {
     'orderBy': 'startTime'
   });
 
+  $("#calendar ul").html("");
   request.execute(function(resp) {
     var events = resp.items;
-    $("#calendar ul").html("");
     if (events.length > 0) {
       for (i = 0; i < events.length; i++) {
         var event = events[i];

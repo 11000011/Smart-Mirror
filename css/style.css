@@ -109,6 +109,8 @@ body {
   -o-tranform: scale(-1, 1);
   transform: scale(-1, 1);
   filter: FlipH;
+  -webkit-filter: brightness(75%);
+  filter: brightness(75%);
 }
 
 footer {
