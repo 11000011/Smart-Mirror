@@ -1,23 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Righteous);
-
 body {
   background-color: #111111
 }
+
 #parent_time {
   position: fixed;
   top: 10%;
-  left:5%;
+  left: 5%;
   text-align: center;
   color: #EEEEEE;
   position: fixed;
   font-family: "Righteous", cursive;
 }
+
 #video {
-  position:absolute;
-  height:5%;
-  width:5%;
-  left:8%;
-  bottom:2%;
+  position: absolute;
+  height: 5%;
+  width: 5%;
+  left: 8%;
+  bottom: 2%;
 }
 
 #time {
@@ -44,33 +45,36 @@ body {
 .weather {
   position: fixed;
   top: 10%;
-  left:88%;
+  left: 88%;
   color: #EEEEEE
-
 }
+
 #temp {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 700;
   font-size: 4em;
 }
+
 #summary {
   color: #EEEEEE;
   font-family: "Righteous", cursive;
   font-weight: 500;
   font-size: 2em;
 }
+
 #temp_sum {
-  display:inline-block;
-  left:75%;
-  top : 10%;
+  display: inline-block;
+  left: 75%;
+  top: 10%;
   text-align: center;
-  position:fixed;
+  position: fixed;
 }
+
 #weather {
   position: relative;
   color: #EEEEEE;
-  left :8%;
+  left: 8%;
 }
 
 #calendar {
@@ -96,15 +100,15 @@ body {
 }
 
 #image2 {
-  position : fixed;
-  top : 0px;
-  left : 0px;
-  width : 100%;
-  -moz-transform : scale(-1, 1);
-  -webkit-transform : scale(-1, 1);
-  -o-tranform : scale(-1, 1);
-  transform : scale(-1, 1);
-  filter : FlipH;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-tranform: scale(-1, 1);
+  transform: scale(-1, 1);
+  filter: FlipH;
 }
 
 footer {
@@ -112,7 +116,6 @@ footer {
   font-family: "Righteous", cursive;
   font-size: 1em;
   bottom: 2%;
-  position:fixed;
-  left:79%;
+  position: fixed;
+  left: 79%;
 }
-
