@@ -4,20 +4,20 @@ var current_user;
 
 function getAuth() {
   $.ajax({
-  url: "https://www.googleapis.com/oauth2/v4/token",
-  data: {
-    client_id: keys.clientId,
-    client_secret: keys.clientSecret,
-    refresh_token: current_user.refreshKey,
-    grant_type: "refresh_token"
-  },
-  type: "POST",
-  dataType: "json"
-  })
-  .done(function(token) {
-    gapi.auth.setToken(token);
-    loadCalendarApi();
-  });
+      url: "https://www.googleapis.com/oauth2/v4/token",
+      data: {
+        client_id: keys.clientId,
+        client_secret: keys.clientSecret,
+        refresh_token: current_user.refreshKey,
+        grant_type: "refresh_token"
+      },
+      type: "POST",
+      dataType: "json"
+    })
+    .done(function(token) {
+      gapi.auth.setToken(token);
+      loadCalendarApi();
+    });
 }
 
 /**
@@ -59,7 +59,7 @@ function listUpcomingEvents() {
           minute = "0" + minute;
         }
         when = when.getDate() + '/' + when.getMonth() + " " + when.getHours() + ":" + minute;
-        $("#calendar ul").append('<li>'+ event.summary + ' (' + when + ')' + '</li>');
+        $("#calendar ul").append('<li>' + event.summary + ' (' + when + ')' + '</li>');
         console.log(event);
       }
     } else {
