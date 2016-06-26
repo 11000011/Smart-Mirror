@@ -4,6 +4,7 @@ var canvas = document.getElementById('canvas');
 
 var im1, im2, im3;
 var link;
+var keys;
 
 //function for checking if there is error in streaming of video or not
 function init(){
@@ -33,6 +34,16 @@ $(document).ready(function() {
   init();
   play();
   $.ajax({
+    url: "keys.json",
+    type: "GET",
+    dataType: "json",
+    async: false
+  }).done(function(json) {
+    console.log(json);
+    keys = json;
+  });
+
+  $.ajax({
     url: "https://accounts.google.com/o/oauth2/device/code",
     type: "POST",
     data: {
@@ -41,6 +52,7 @@ $(document).ready(function() {
     },
     dataType: "json"
   }).done(function(result) {
+    console.log(result);
     $("#google").html(result.user_code);
     link = result.device_code;
   });
@@ -100,7 +112,7 @@ $('#submit').click(function() {
   console.log("submit");
   $('#message').html("Please Wait...");
   $('#startpage').hide();
-  $('#finalpage').show();
+  $('rfinalpage').show();
   var name = $("#exampleName").html();
   var pushkey = $("#pushKey").html();
   var refreshKey;
